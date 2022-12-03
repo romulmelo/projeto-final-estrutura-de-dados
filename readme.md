@@ -22,6 +22,35 @@ Para a resolução dos exercícios e desenvolvimento do projeto prático foi uti
 - Filas
 - Pilhas
 
+## 🏃🏾‍♂️ Executando o projeto
+
+**Windows**
+
+Para executar o projeto no Windows é necessário ter o compilador [MinGW](http://www.mingw.org/) instalado em sua máquina.
+
+Com o MinGW instalado, basta abrir o terminal (prompt) na pasta do exercício ou projeto que deseja executar o execute comando abaixo:
+
+```
+gcc -o nome_executavel.exe nome_arquivo.c
+```
+
+Em seguida, basta executar o arquivo executável gerado.
+  ___
+
+**Mac**
+
+Para executar o projeto no Mac é necessário ter o [Xcode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) instalado em sua máquina.
+
+Com o XCode instalado, basta abrir o terminal na pasta do exercício ou projeto que deseja executar o execute comando abaixo:
+
+```
+clang nome_arquivo -o nome_executavel
+```
+
+Em seguida, basta executar o arquivo executável gerado.
+
+> Tanto no Windows como no Mac é possível executar o arquivo diretamente no terminal. Para isso basta escrever: `./nome_executavel` no terminal e apertar enter.
+
 ## 👩🏽‍💻 Equipe
 
 Mayumi Melo Oshiro - **PT3020428**
