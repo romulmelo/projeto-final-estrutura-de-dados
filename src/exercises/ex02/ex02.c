@@ -5,6 +5,11 @@
 int main(void) {
   Queue *q = create(TAM);
 
+  insertItem(q, 1);
+  insertItem(q, 2);
+  insertItem(q, 3);
+
+  findItem(q, 4);
   return 0;
 }
 
@@ -26,6 +31,22 @@ int isQueueFull(Queue *q) {
 
 int isQueueEmpty(Queue *q) {
   return q->qty == 0;
+}
+
+int findItem(Queue *q, int number) {
+  Node *head = q->head;
+
+  while (head) {
+    if (head->number == number) {
+      printf("Found!\n");
+      return 1;
+    }
+
+    head = head->next;
+  }
+
+  printf("Not found!\n");
+  return 0;
 }
 
 void insertItem(Queue *q, int number) {
