@@ -5,13 +5,6 @@
 int main(void) {
   Queue *q = create(TAM);
 
-  insertItem(q, 1);
-  insertItem(q, 2);
-  insertItem(q, 3);
-  insertItem(q, 4);
-  insertItem(q, 5);
-  insertItem(q, 6);
-
   return 0;
 }
 
@@ -57,4 +50,24 @@ void insertItem(Queue *q, int number) {
 
     q->qty++;
   }
+}
+
+void removeItem(Queue *q) {
+  if (q->head == NULL) {
+    return;
+  } else if (isQueueEmpty(q)) {
+    printf("Queue is empty.\n");
+    return;
+  }
+
+  Node *head = q->head;
+
+  q->head = q->head->next;
+  free(head);
+
+  if (q->head == NULL) {
+    q->tail = NULL;
+  }
+
+  q->qty--;
 }
