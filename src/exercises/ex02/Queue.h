@@ -13,3 +13,5 @@ typedef struct {
   int max_items;
   int qty;
 } Queue;
+
+Queue *create(int max_items);
