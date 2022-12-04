@@ -15,3 +15,5 @@ typedef struct {
 } Queue;
 
 Queue *create(int max_items);
+
+int isQueueEmpty(Queue *q);
