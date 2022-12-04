@@ -18,5 +18,6 @@ Queue *create(int max_items);
 
 int isQueueFull(Queue *q);
 int isQueueEmpty(Queue *q);
+int findItem(Queue *q, int number);
 void insertItem(Queue *q, int number);
 void removeItem(Queue *q);
