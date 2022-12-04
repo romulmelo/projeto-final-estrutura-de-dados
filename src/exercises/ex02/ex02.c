@@ -20,6 +20,9 @@ Queue *create(int max_items) {
 
   return q;
 }
+int isQueueFull(Queue *q) {
+  return q->qty == q->max_items;
+}
 
 int isQueueEmpty(Queue *q) {
   return q->qty == 0;
