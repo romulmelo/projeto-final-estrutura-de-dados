@@ -11,3 +11,5 @@ typedef struct {
   int max_items;
   int qty;
 } Stack;
+
+Stack *create(int max_items);
