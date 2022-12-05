@@ -5,11 +5,12 @@
 int main(void) {
   Queue *q = create(TAM);
 
+  insertItem(q, 12);
+  insertItem(q, 7);
+  insertItem(q, 45);
+  insertItem(q, 12);
   insertItem(q, 1);
-  insertItem(q, 2);
-  insertItem(q, 3);
 
-  findItem(q, 4);
   return 0;
 }
 
@@ -25,6 +26,15 @@ Queue *create(int max_items) {
 
   return q;
 }
+
+int size(Queue *q) {
+  if (q == NULL) {
+    return -1;
+  } else {
+    return q->qty;
+  }
+}
+
 int isQueueFull(Queue *q) {
   return q->qty == q->max_items;
 }
