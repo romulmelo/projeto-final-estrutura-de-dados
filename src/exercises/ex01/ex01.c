@@ -23,3 +23,7 @@ Stack *create(int max_items) {
 int isStackEmpty(Stack *s) {
   return (s->qty == 0);
 }
+
+int isStackFull(Stack *s) {
+  return (s->qty == s->max_items);
+}
