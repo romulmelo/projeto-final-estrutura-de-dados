@@ -11,6 +11,14 @@ int main(void) {
   insertItem(q, 12);
   insertItem(q, 1);
 
+  show(q);
+
+  removeItem(q);
+  removeItem(q);
+  removeItem(q);
+
+  show(q);
+
   return 0;
 }
 
@@ -101,4 +109,23 @@ void removeItem(Queue *q) {
   }
 
   q->qty--;
+}
+
+void show(Queue *q) {
+  Node *head = q->head;
+
+  if (isQueueEmpty(q)) {
+    printf("Queue is empty.\n");
+    return;
+  }
+
+  printf("\nElements in queue: %d", size(q));
+  printf("\n---------------\n");
+
+  while (head) {
+    printf("%d ", head->number);
+    head = head->next;
+  }
+
+  printf("\n---------------\n");
 }
