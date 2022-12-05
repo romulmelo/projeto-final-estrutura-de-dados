@@ -22,3 +22,4 @@ int isQueueEmpty(Queue *q);
 int findItem(Queue *q, int number);
 void insertItem(Queue *q, int number);
 void removeItem(Queue *q);
+void show(Queue *q);
