@@ -13,3 +13,5 @@ typedef struct {
 } Stack;
 
 Stack *create(int max_items);
+
+int isStackEmpty(Stack *s);
