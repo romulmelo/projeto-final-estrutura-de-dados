@@ -19,3 +19,7 @@ Stack *create(int max_items) {
 
   return s;
 }
+
+int isStackEmpty(Stack *s) {
+  return (s->qty == 0);
+}
