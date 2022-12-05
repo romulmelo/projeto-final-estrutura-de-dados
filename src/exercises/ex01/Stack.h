@@ -15,3 +15,4 @@ typedef struct {
 Stack *create(int max_items);
 
 int isStackEmpty(Stack *s);
+int isStackFull(Stack *s);
