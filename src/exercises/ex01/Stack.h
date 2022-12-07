@@ -17,5 +17,6 @@ Stack *create(int max_items);
 int size(Stack *s);
 int isStackEmpty(Stack *s);
 int isStackFull(Stack *s);
+int findItem(Stack *s, int number);
 void insertItem(Stack *s, int number);
 void removeItem(Stack *s);
