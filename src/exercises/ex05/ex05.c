@@ -60,11 +60,7 @@ void generateEvenAndOddStack(Stack *even, Stack *odd, Stack *input) {
   Node *top = input->top;
 
   while (top) {
-    if (top->number % 2 == 0) {
-      insertItem(even, top->number);
-    } else {
-      insertItem(odd, top->number);
-    }
+    top->number % 2 == 0 ? insertItem(even, top->number) : insertItem(odd, top->number);
 
     top = top->next;
   }
