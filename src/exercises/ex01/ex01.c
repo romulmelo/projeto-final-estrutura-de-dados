@@ -45,6 +45,22 @@ int isStackFull(Stack *s) {
   return (s->qty == s->max_items);
 }
 
+int findItem(Stack *s, int number) {
+  Node *top = s->top;
+
+  while (top) {
+    if (top->number == number) {
+      printf("Item %d found!\n", number);
+      return 1;
+    }
+
+    top = top->next;
+  }
+
+  printf("Item not found!\n");
+  return 0;
+}
+
 void insertItem(Stack *s, int number) {
   if (isStackFull(s)) {
     printf("Stack is full!");
