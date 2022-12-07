@@ -70,6 +70,24 @@ void generateEvenAndOddStack(Stack *even, Stack *odd, Stack *input) {
   }
 }
 
+void show(Stack *s) {
+  Node *top = s->top;
+
+  if (isStackEmpty(s)) {
+    printf("Stack is empty!\n");
+    return;
+  }
+
+  while(top) {
+    if (top != NULL) {
+      printf("%d ", top->number);
+      top = top->next;
+    }
+  }
+
+  printf("\n---------------------\n");
+}
+
 int main(int argc, char const *argv[]) {
   Stack *s = fillInputStack();
 
