@@ -90,6 +90,19 @@ void show(Stack *s) {
 
 int main(int argc, char const *argv[]) {
   Stack *s = fillInputStack();
+  Stack *even = create();
+  Stack *odd = create();
+
+  printf("\nInput stack: ");
+  show(s);
+
+  generateEvenAndOddStack(even, odd, s);
+
+  printf("\nEven numbers: ");
+  show(even);
+
+  printf("\nOdd numbers: ");
+  show(odd);
 
   return 0;
 }
