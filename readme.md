@@ -9,11 +9,11 @@
 
 ## 💻 Projeto
 
-O projeto final da disciplina de estrutura de dados consiste na resolução de exerícios sobre a matéria e o desenvolvimento de um projeto prático que consiste em um sisetema de adega de vinhos.
+O projeto final da disciplina de estrutura de dados consiste na resolução de exerícios sobre a matéria e o desenvolvimento de um projeto prático que consiste em um sistema de adega de vinhos.
 
 ## 🚀 Tecnologias
 
-Para a resolução dos exercícios e desenvolvimento do projeto prático foi utilizado a [linguagem de programção C](https://pt.wikipedia.org/wiki/C_linguagem_de_programa%C3%A7%C3%A3o)
+Para a resolução dos exercícios e desenvolvimento do projeto prático foi utilizado a [linguagem de programação C](https://pt.wikipedia.org/wiki/C_linguagem_de_programa%C3%A7%C3%A3o)
 
 ### Aspectos técnicos abordados
 - TAD
