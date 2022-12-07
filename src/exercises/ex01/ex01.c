@@ -11,8 +11,14 @@ int main(void) {
   insertItem(s, 12);
   insertItem(s, 1);
 
+  show(s);
+
   removeItem(s);
   removeItem(s);
+
+  insertItem(s, 99);
+
+  show(s);
 
   return 0;
 }
@@ -89,4 +95,24 @@ void removeItem(Stack *s) {
   free(node);
 
   s->qty--;
+}
+
+void show(Stack *s) {
+  Node *top = s->top;
+
+  if (isStackEmpty(s)) {
+    printf("Stack is empty!");
+    return;
+  }
+
+  printf("\n---------------\n");
+
+  while(top) {
+    if (top != NULL) {
+      printf("%d ", top->number);
+      top = top->next;
+    }
+  }
+
+  printf("\n---------------\n");
 }
