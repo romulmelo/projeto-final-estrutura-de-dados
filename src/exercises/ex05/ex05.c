@@ -56,6 +56,20 @@ Stack *fillInputStack() {
   return s;
 }
 
+void generateEvenAndOddStack(Stack *even, Stack *odd, Stack *input) {
+  Node *top = input->top;
+
+  while (top) {
+    if (top->number % 2 == 0) {
+      insertItem(even, top->number);
+    } else {
+      insertItem(odd, top->number);
+    }
+
+    top = top->next;
+  }
+}
+
 int main(int argc, char const *argv[]) {
   Stack *s = fillInputStack();
 
