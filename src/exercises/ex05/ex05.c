@@ -26,6 +26,17 @@ int isStackEmpty(Stack *s) {
   return (s->qty == 0);
 }
 
+void insertItem(Stack *s, int number) {
+  Node *node = (Node *) malloc(sizeof(Node));
+
+  if (node != NULL) {
+    node->number = number;
+    node->next = s->top;
+    s->top = node;
+    s->qty++;
+  }
+}
+
 int main(int argc, char const *argv[]) {
   return 0;
 }
