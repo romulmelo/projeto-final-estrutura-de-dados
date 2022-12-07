@@ -18,3 +18,4 @@ int size(Stack *s);
 int isStackEmpty(Stack *s);
 int isStackFull(Stack *s);
 void insertItem(Stack *s, int number);
+void removeItem(Stack *s);
