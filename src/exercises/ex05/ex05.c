@@ -37,6 +37,27 @@ void insertItem(Stack *s, int number) {
   }
 }
 
+Stack *fillInputStack() {
+  Stack *s = create();
+
+  do {
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    if (number <= 0) {
+      break;
+    }
+
+    insertItem(s, number);
+  } while (1);
+
+  return s;
+}
+
 int main(int argc, char const *argv[]) {
+  Stack *s = fillInputStack();
+
   return 0;
 }
