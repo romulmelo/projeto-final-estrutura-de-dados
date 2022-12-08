@@ -17,6 +17,10 @@ int isQueueFull(Queue *queue){
   return queue->qtdy == queue->max_items;
 }
 
+int isQueueEmpty(Queue *queue){
+  return queue->qtdy == 0;
+}
+
 int main(int argc, char const *argv[]){
   return 0;
 }
