@@ -36,25 +36,6 @@ Queue *create(int max_items){
   return queue;
 }
 
-Queue *sortAscendingQueue(Queue *queue){
-  Node *aux = queue->head;
-  Node *aux2 = queue->head;
-
-  while (aux != NULL){
-    while (aux2 != NULL){
-      if (aux->value > aux2->value){
-        int temp = aux->value;
-        aux->value = aux2->value;
-        aux2->value = temp;
-      }
-      aux2 = aux2->next;
-    }
-    aux = aux->next;
-  }
-
-  return queue;
-}
-
 void insertItem(Queue *q, int number) {
   if (isQueueFull(q)) {
     printf("Queue is full.\n");
@@ -77,8 +58,28 @@ void insertItem(Queue *q, int number) {
 
     q->qtdy++;
   }
+}
 
-  sortAscendingQueue(q);
+void sortingAscedingQueue(Queue *q) {
+  Node *head = q->head;
+  Node *aux = NULL;
+  int temp;
+
+  while (head) {
+    aux = head->next;
+
+    while (aux) {
+      if (head->value > aux->value) {
+        temp = head->value;
+        head->value = aux->value;
+        aux->value = temp;
+      }
+
+      aux = aux->next;
+    }
+
+    head = head->next;
+  }
 }
 
 int main(int argc, char const *argv[]){
