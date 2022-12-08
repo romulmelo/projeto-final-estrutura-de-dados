@@ -82,6 +82,24 @@ void sortingAscedingQueue(Queue *q) {
   }
 }
 
+void generateNewQueue(Queue *st, Queue *nd, Queue *rd) {
+  Node *head = st->head;
+
+  while (head) {
+    insertItem(rd, head->value);
+    head = head->next;
+  }
+
+  head = nd->head;
+
+  while (head) {
+    insertItem(rd, head->value);
+    head = head->next;
+  }
+
+  sortingAscedingQueue(rd);
+}
+
 int main(int argc, char const *argv[]){
   Queue *st = create(MAX);
   Queue *nd = create(MAX);
@@ -94,6 +112,8 @@ int main(int argc, char const *argv[]){
   insertItem(nd, 25);
   insertItem(nd, 13);
   insertItem(nd, 10);
+
+  generateNewQueue(st, nd, rd);
 
   return 0;
 }
