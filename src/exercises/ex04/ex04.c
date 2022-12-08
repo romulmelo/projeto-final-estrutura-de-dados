@@ -100,6 +100,24 @@ void generateNewQueue(Queue *st, Queue *nd, Queue *rd) {
   sortingAscedingQueue(rd);
 }
 
+void show(Queue *q) {
+  Node *head = q->head;
+
+  if (isQueueEmpty(q)) {
+    printf("Queue is empty.\n");
+    return;
+  }
+
+  printf("\n---------------------\n");
+
+  while (head) {
+    printf("%d ", head->value);
+    head = head->next;
+  }
+
+  printf("\n---------------------\n");
+}
+
 int main(int argc, char const *argv[]){
   Queue *st = create(MAX);
   Queue *nd = create(MAX);
@@ -113,7 +131,14 @@ int main(int argc, char const *argv[]){
   insertItem(nd, 13);
   insertItem(nd, 10);
 
+  sortingAscedingQueue(st);
+  sortingAscedingQueue(nd);
+
   generateNewQueue(st, nd, rd);
+
+  show(st);
+  show(nd);
+  show(rd);
 
   return 0;
 }
