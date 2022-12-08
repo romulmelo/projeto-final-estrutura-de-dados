@@ -13,6 +13,10 @@ typedef struct queue {
   int qtdy;
 } Queue;
 
+int isQueueFull(Queue *queue){
+  return queue->qtdy == queue->max_items;
+}
+
 int main(int argc, char const *argv[]){
   return 0;
 }
