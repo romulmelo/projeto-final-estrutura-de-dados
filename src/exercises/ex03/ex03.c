@@ -28,6 +28,10 @@ int isStackEmpty(Stack *s) {
   return s->qty == 0;
 }
 
+int isStackFull(Stack *s) {
+  return s->qty == s->max_items;
+}
+
 int main(int argc, char const *argv[]) {
   return 0;
 }
