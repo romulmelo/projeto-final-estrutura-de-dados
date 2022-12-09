@@ -12,6 +12,18 @@ typedef struct stack {
   int qty;
 } Stack;
 
+Stack *create(int max_items) {
+  Stack *s = (Stack*) malloc(sizeof(Stack));
+
+  if (s != NULL) {
+    s->top = NULL;
+    s->max_items = max_items;
+    s->qty = 0;
+  }
+
+  return s;
+}
+
 int main(int argc, char const *argv[]) {
   return 0;
 }
