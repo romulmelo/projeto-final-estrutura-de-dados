@@ -69,7 +69,27 @@ void sortingAscedingStack(Stack *s) {
   }
 }
 
-int main(int argc, char const *argv[]) {
+void sortingDescendingStack(Stack *s) {
+  Node *aux = s->top;
+  int temp;
 
+  while (aux != NULL) {
+    Node *aux2 = aux->next;
+
+    while (aux2 != NULL) {
+      if (aux->value < aux2->value) {
+        temp = aux->value;
+        aux->value = aux2->value;
+        aux2->value = temp;
+      }
+
+      aux2 = aux2->next;
+    }
+
+    aux = aux->next;
+  }
+}
+
+int main(int argc, char const *argv[]) {
   return 0;
 }
