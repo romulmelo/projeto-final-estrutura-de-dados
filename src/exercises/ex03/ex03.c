@@ -90,6 +90,24 @@ void sortingDescendingStack(Stack *s) {
   }
 }
 
+void generateNewStack(Stack *st, Stack *nd, Stack *rd) {
+  Node *aux = st->top;
+
+  while (aux) {
+    insertItem(rd, aux->value);
+    aux = aux->next;
+  }
+
+  aux = nd->top;
+
+  while (aux) {
+    insertItem(rd, aux->value);
+    aux = aux->next;
+  }
+
+  sortingDescendingStack(rd);
+}
+
 int main(int argc, char const *argv[]) {
   return 0;
 }
