@@ -32,6 +32,22 @@ int isStackFull(Stack *s) {
   return s->qty == s->max_items;
 }
 
+void insertItem(Stack *s, int value) {
+  if (isStackFull(s)) {
+    printf("Stack is full!\n");
+    return;
+  }
+
+  Node *node = (Node*) malloc(sizeof(Node));
+
+  if (node != NULL) {
+    node->value = value;
+    node->next = s->top;
+    s->top = node;
+    s->qty++;
+  }
+}
+
 int main(int argc, char const *argv[]) {
   return 0;
 }
