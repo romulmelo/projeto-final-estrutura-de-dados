@@ -129,6 +129,29 @@ void show(Stack *s) {
 }
 
 int main(int argc, char const *argv[]) {
+  Stack *st = create(10);
+  Stack *nd = create(10);
+  Stack *rd = create(20);
+
+  insertItem(st, 11);
+  insertItem(st, 7);
+  insertItem(st, 3);
+  insertItem(st, 24);
+  insertItem(st, 54);
+
+  insertItem(nd, 1);
+  insertItem(nd, 2);
+  insertItem(nd, 6);
+  insertItem(nd, 8);
+
+  sortingAscedingStack(st);
+  sortingAscedingStack(nd);
+
+  generateNewStack(st, nd, rd);
+
+  show(st);
+  show(nd);
+  show(rd);
 
   return 0;
 }
