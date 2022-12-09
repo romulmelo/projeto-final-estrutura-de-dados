@@ -108,6 +108,27 @@ void generateNewStack(Stack *st, Stack *nd, Stack *rd) {
   sortingDescendingStack(rd);
 }
 
+void show(Stack *s) {
+  Node *top = s->top;
+
+  if (isStackEmpty(s)) {
+    printf("Stack is empty!");
+    return;
+  }
+
+  printf("\n---------------------\n");
+
+  while(top) {
+    if (top != NULL) {
+      printf("%d ", top->value);
+      top = top->next;
+    }
+  }
+
+  printf("\n---------------------\n");
+}
+
 int main(int argc, char const *argv[]) {
+
   return 0;
 }
