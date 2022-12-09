@@ -24,6 +24,10 @@ Stack *create(int max_items) {
   return s;
 }
 
+int isStackEmpty(Stack *s) {
+  return s->qty == 0;
+}
+
 int main(int argc, char const *argv[]) {
   return 0;
 }
