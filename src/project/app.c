@@ -45,3 +45,23 @@ Wine *createWine() {
 int isQueueEmpty(Queue *q) {
   return q->qty == 0;
 }
+
+void insertItem(Queue *q, Wine *w) {
+  Node *node = (Node*) malloc(sizeof(Node));
+
+  if (node != NULL) {
+    node->wine = w;
+    node->next = NULL;
+
+    if (isQueueEmpty(q)) {
+      node->prev = NULL;
+      q->head = node;
+    } else {
+      node->prev = q->tail;
+      q->tail->next = node;
+    }
+
+    q->tail = node;
+    q->qty++;
+  }
+}
