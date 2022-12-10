@@ -91,3 +91,16 @@ void showUniqueWine(Wine *w) {
   printf("Harvest: %d\n)", w->harvest);
   printf("\n--------------------\n");
 }
+
+void showLatestWineList(Queue *q) {
+  if (!isQueueEmpty(q)) {
+    Node *node = q->tail;
+
+    for (int i = 0; i < node && i < 5; i++) {
+      showUniqueWine(node->wine);
+      node = node->prev;
+    }
+  } else {
+    printf("Queue is empty.\n");
+  }
+}
