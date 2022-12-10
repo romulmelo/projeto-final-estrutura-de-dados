@@ -27,3 +27,4 @@ void removeItem(Queue *q);
 void showUniqueWine(Wine *w);
 void showLatestWineList(Queue *q);
 void showOldestWineList(Queue *q);
+void addNewWine(Queue *q);
