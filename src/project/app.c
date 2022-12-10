@@ -78,5 +78,7 @@ void removeItem(Queue *q) {
 
     free(node);
     q->qty--;
+  } else {
+    printf("Queue is empty.\n");
   }
 }
