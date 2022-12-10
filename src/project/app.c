@@ -65,3 +65,18 @@ void insertItem(Queue *q, Wine *w) {
     q->qty++;
   }
 }
+
+void removeItem(Queue *q) {
+  if (!isQueueEmpty(q)) {
+    Node *node = q->head;
+
+    q->head = node->next;
+
+    if (q->head != NULL) {
+      q->head->prev = NULL;
+    }
+
+    free(node);
+    q->qty--;
+  }
+}
