@@ -20,3 +20,4 @@ typedef struct queue {
 } Queue;
 
 Queue *createQueue();
+Wine *createWine();
