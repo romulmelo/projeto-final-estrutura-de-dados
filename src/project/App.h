@@ -18,3 +18,5 @@ typedef struct queue {
   Node *tail;
   int qty;
 } Queue;
+
+Queue *createQueue();
