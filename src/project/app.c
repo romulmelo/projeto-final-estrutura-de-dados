@@ -41,3 +41,7 @@ Wine *createWine() {
 
   return w;
 }
+
+int isQueueEmpty(Queue *q) {
+  return q->qty == 0;
+}
