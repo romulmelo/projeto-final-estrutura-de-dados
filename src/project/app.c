@@ -107,6 +107,19 @@ void removeItem(Queue *q) {
   }
 }
 
+void showQueueItems(Queue *q) {
+  if (!isQueueEmpty(q)) {
+    Node *node = q->head;
+
+    while (node) {
+      showUniqueWine(node->wine);
+      node = node->next;
+    }
+  } else {
+    printf("Queue is empty.\n");
+  }
+}
+
 void showUniqueWine(Wine *w) {
   printf("\n--------------------\n");
   printf("Name: %s\n)", w->name);
