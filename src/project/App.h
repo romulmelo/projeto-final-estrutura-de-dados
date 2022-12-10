@@ -21,3 +21,4 @@ typedef struct queue {
 
 Queue *createQueue();
 Wine *createWine();
+int isQueueEmpty(Queue *q);
