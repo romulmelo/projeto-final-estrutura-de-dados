@@ -25,6 +25,7 @@ int isQueueEmpty(Queue *q);
 void sortAscendingQueue(Queue *q);
 void insertItem(Queue *q, Wine *w);
 void removeItem(Queue *q);
+void showQueueItems(Queue *q);
 void showUniqueWine(Wine *w);
 void showLatestWineList(Queue *q);
 void showOldestWineList(Queue *q);
