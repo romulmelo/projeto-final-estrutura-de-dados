@@ -42,6 +42,26 @@ Wine *createWine() {
   return w;
 }
 
+int menu() {
+  fflush(stdin);
+
+  int option;
+
+  printf("\n--------------------\n");
+  printf("1 -- Add a new wine\n");
+  printf("2 -- Add most recent wine to special list\n");
+  printf("3 -- Show non-special older wine\n");
+  printf("4 -- Show latest special wine\n");
+  printf("5 -- Show five older wines\n");
+  printf("6 -- Show five most recent wines\n");
+  printf("7 -- Exit\n");
+  printf("\n--------------------\n");
+
+  scanf("%d", &option);
+
+  return option;
+}
+
 int isQueueEmpty(Queue *q) {
   return q->qty == 0;
 }
@@ -122,10 +142,10 @@ void showQueueItems(Queue *q) {
 
 void showUniqueWine(Wine *w) {
   printf("\n--------------------\n");
-  printf("Name: %s\n)", w->name);
-  printf("Birthplace: %s\n)", w->birthplace);
-  printf("Grape type: %s\n)", w->grapeType);
-  printf("Harvest: %d\n)", w->harvest);
+  printf("Name: %s\n", w->name);
+  printf("Birthplace: %s\n", w->birthplace);
+  printf("Grape type: %s\n", w->grapeType);
+  printf("Harvest: %d\n", w->harvest);
   printf("\n--------------------\n");
 }
 
