@@ -3,6 +3,49 @@
 #include "App.h"
 
 int main(int argc, char const *argv[]) {
+  Queue *wines = createQueue();
+  Queue *specialWines = createQueue();
+
+  int option = menu();
+
+  while (option != 7) {
+    switch (option) {
+      case 1:
+        addNewWine(wines);
+        break;
+      case 2:
+        insertItem(specialWines, wines->tail->wine);
+        break;
+      case 3:
+        if (!isQueueEmpty(wines)) {
+          showUniqueWine(wines->head->wine);
+          removeItem(wines);
+        } else {
+          printf("Queue is empty.\n");
+        }
+        break;
+      case 4:
+        showUniqueWine(specialWines->tail->wine);
+        break;
+      case 5:
+        showOldestWineList(wines);
+        break;
+      case 6:
+        showLatestWineList(wines);
+        break;
+      case 7:
+        showQueueItems(wines);
+        showQueueItems(specialWines);
+        exit(0);
+        break;
+      default:
+        printf("Invalid option.\n");
+        break;
+    }
+
+    option = menu();
+  }
+
   return 0;
 }
 
