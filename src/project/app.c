@@ -117,3 +117,8 @@ void showOldestWineList(Queue *q) {
     printf("Queue is empty.\n");
   }
 }
+
+void addNewWine(Queue *q) {
+  Wine *new_wine = createWine();
+  insertItem(q, new_wine);
+}
