@@ -17,3 +17,27 @@ Queue *createQueue() {
 
   return q;
 }
+
+Wine *createWine() {
+  Wine *w = (Wine*) malloc(sizeof(Wine));
+
+  if (w != NULL) {
+    fflush(stdin);
+    printf("Name: ");
+    scanf("%s", w->name);
+
+    fflush(stdin);
+    printf("Birthplace: ");
+    scanf("%s", w->birthplace);
+
+    fflush(stdin);
+    printf("Grape type: ");
+    scanf("%s", w->grapeType);
+
+    fflush(stdin);
+    printf("Harvest: ");
+    scanf("%d", &w->harvest);
+  }
+
+  return w;
+}
