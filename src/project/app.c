@@ -104,3 +104,16 @@ void showLatestWineList(Queue *q) {
     printf("Queue is empty.\n");
   }
 }
+
+void showOldestWineList(Queue *q) {
+  if (!isQueueEmpty(q)) {
+    Node *node = q->head;
+
+    for (int i = 0; i < node && i < 5; i++) {
+      showUniqueWine(node->wine);
+      node = node->next;
+    }
+  } else {
+    printf("Queue is empty.\n");
+  }
+}
