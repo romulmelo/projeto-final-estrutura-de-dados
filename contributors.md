@@ -4,6 +4,7 @@
 
 - Resolução - exercicio 1
 - Resolução - exercicio 2
+- Resolução - Projeto
 
 ## Mayumi Melo Oshiro
 
