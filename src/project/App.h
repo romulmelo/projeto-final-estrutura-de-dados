@@ -23,3 +23,4 @@ Queue *createQueue();
 Wine *createWine();
 int isQueueEmpty(Queue *q);
 void insertItem(Queue *q, Wine *w);
+void removeItem(Queue *q);
