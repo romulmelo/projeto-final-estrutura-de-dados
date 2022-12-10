@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]) {
 
   int option = menu();
 
-  while (option != 7) {
+  while (option != 8) {
     switch (option) {
       case 1:
         addNewWine(wines);
@@ -25,7 +25,11 @@ int main(int argc, char const *argv[]) {
         }
         break;
       case 4:
-        showUniqueWine(specialWines->tail->wine);
+        if (!isQueueEmpty(specialWines)) {
+          showUniqueWine(specialWines->tail->wine);
+        } else {
+          printf("Queue is empty.\n");
+        }
         break;
       case 5:
         showOldestWineList(wines);
@@ -196,9 +200,12 @@ void showLatestWineList(Queue *q) {
   if (!isQueueEmpty(q)) {
     Node *node = q->tail;
 
-    for (int i = 0; i < node && i < 5; i++) {
+    int i = 0;
+
+    while (node && i < 5) {
       showUniqueWine(node->wine);
       node = node->prev;
+      i++;
     }
   } else {
     printf("Queue is empty.\n");
@@ -209,9 +216,12 @@ void showOldestWineList(Queue *q) {
   if (!isQueueEmpty(q)) {
     Node *node = q->head;
 
-    for (int i = 0; i < node && i < 5; i++) {
+    int i = 0;
+
+    while (node && i < 5) {
       showUniqueWine(node->wine);
       node = node->next;
+      i++;
     }
   } else {
     printf("Queue is empty.\n");
