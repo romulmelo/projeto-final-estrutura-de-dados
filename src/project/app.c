@@ -82,3 +82,12 @@ void removeItem(Queue *q) {
     printf("Queue is empty.\n");
   }
 }
+
+void showUniqueWine(Wine *w) {
+  printf("\n--------------------\n");
+  printf("Name: %s\n)", w->name);
+  printf("Birthplace: %s\n)", w->birthplace);
+  printf("Grape type: %s\n)", w->grapeType);
+  printf("Harvest: %d\n)", w->harvest);
+  printf("\n--------------------\n");
+}
