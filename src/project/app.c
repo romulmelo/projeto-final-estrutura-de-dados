@@ -46,6 +46,30 @@ int isQueueEmpty(Queue *q) {
   return q->qty == 0;
 }
 
+void sortAscedingQueue(Queue *q) {
+  if (!isQueueEmpty(q)) {
+    Node *node = q->head;
+
+    for (int i = 0; i < node; i++) {
+      Node *node2 = node->next;
+
+      for (int j = i + 1; j < node2; j++) {
+        if (node->wine->harvest > node2->wine->harvest) {
+          Wine *aux = node->wine;
+          node->wine = node2->wine;
+          node2->wine = aux;
+        }
+
+        node2 = node2->next;
+      }
+
+      node = node->next;
+    }
+  } else {
+    printf("Queue is empty.\n");
+  }
+}
+
 void insertItem(Queue *q, Wine *w) {
   Node *node = (Node*) malloc(sizeof(Node));
 
@@ -121,4 +145,7 @@ void showOldestWineList(Queue *q) {
 void addNewWine(Queue *q) {
   Wine *new_wine = createWine();
   insertItem(q, new_wine);
+
+  sortAscedingQueue(q);
+  printf("Wine added successfully.\n");
 }
